@@ -35,6 +35,7 @@ class ADdataset(Dataset):
                 self.path) if os.isfile(os.path.join(self.path, f))]
         else:
             self.files = np.load(cv).tolist()
+            self.files = [f for f in self.files if os.path.exists(os.path.join(self.path, f))]
 
     def __len__(self):
         #files=[f for f in os.listdir(self.path) if os.isfile(os.path.join(self.path,f))]

@@ -55,16 +55,11 @@ class CNN(nn.Module):
         self.linear2 = nn.Linear(64, 2)
 
     def forward(self, x):
-        print("original", x)
         x = self.cinput1(x)
-        print("input1", x.shape)
         x = self.cinput2(x)
-        print("input2", x.shape)
 
         x = self.dcc1(x)
-        print("dcc1", x.shape)
         x = self.dcc2(x)
-        print("dcc2", x.shape)
         x = self.dcc3(x)
 
         x = x.view(x.size(dim=0), -1)
