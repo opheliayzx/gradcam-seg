@@ -17,6 +17,8 @@ This script is used to train a unet model from scratch or based on a pretrained 
         4) model_save_path: path to save the trained model
         5) model_load_path: path to pretrained model if you don't want to train from scratch
 The up-to-date model will be saved
+
+Dataset format: The dataset path is a single .npy file which contains file paths to microscopy images under a single directory.
 """
 
 import os
